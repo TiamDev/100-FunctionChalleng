@@ -1,13 +1,4 @@
 <?php 
-
-$str="fatima";
-$str2="fatima baker bakran";
-
-$arr=array(1,2,3,4=>5);
-$arr1=["fatima","baker","bakran"];
-$arr2=['a'=>"fatima","b"=>"baker","c"=>"bakran"];
-
-
 //********** 1
 function fb_empty($chr){
   if($chr==null){
@@ -29,10 +20,7 @@ function fb_strlen($str){
   }
   return $i;
 }
-//echo fb_strlen($str);
-
 //********** 3
-
 function fb_count($arr){
   $counter=0;
   foreach($arr as $value){
@@ -40,8 +28,6 @@ function fb_count($arr){
   }
   return $counter;
 }
-//echo fb_count($arr);
-
 //********** 4
 function fb_str_pad($str,$len,$str2=" ",$pos=1){
   $newStr="";
@@ -72,10 +58,7 @@ function fb_str_pad($str,$len,$str2=" ",$pos=1){
     return $newStr;
   }
 }
-//echo fb_str_pad("$str",11,"x",-1);
-
 //********** 5
-
 function fb_strrev($str){
   $revstr="";
   for($i=fb_strlen($str)-1;$i>=0; $i--)
@@ -85,7 +68,6 @@ function fb_strrev($str){
   return $revstr;
 }
 //********** 6
-
 function fb_str_spilt($str,$len=1){
   $arr=[];
   $index=0;
@@ -101,11 +83,7 @@ function fb_str_spilt($str,$len=1){
   }
   return $arr;
 }
-//print_r(@fb_str_spilt($str));
-
-
 //********** 7
-
 function fb_implode($arr,$str=''){
   $newStr='';
   for($i=0;$i<fb_count($arr);$i++){
@@ -113,11 +91,7 @@ function fb_implode($arr,$str=''){
   }
   return $newStr;
 }
-// echo fb_implode($arr1," ");
-// echo '<br>'.implode($arr1);
-
 //********** 8
-
 function fb_Ucfirst($str){
   for($i=0;$i<fb_strlen($str);$i++){
     if($i==0){
@@ -129,10 +103,7 @@ function fb_Ucfirst($str){
   }
   return $str;
 }
-// echo fb_Ucfirst($str);
-
 //********** 9
-
 function fb_Lcfirst($str){
   for($i=0;$i<fb_strlen($str);$i++){
     if($i==0){
@@ -144,30 +115,20 @@ function fb_Lcfirst($str){
   }
   return $str;
 }
-// echo fb_Lcfirst($str);
-
-
 //********** 10
-
 function fb_strtoupper($str){
   for($i=0;$i<fb_strlen($str);$i++){
     $str[$i]=fb_Ucfirst($str[$i]);
   }
   return $str;
 }
-//echo fb_strtoupper($str);
-
-
 //********** 11
-
 function fb_strtolower($str){
   for($i=0;$i<fb_strlen($str);$i++){
     $str[$i]=fb_Lcfirst($str[$i]);
   }
   return $str;
 }
-//echo fb_strtolower($str);
-
 //********** 12
 function fb_explode($separator,string $str,$limit=null){
   $newStr='';
@@ -190,14 +151,7 @@ function fb_explode($separator,string $str,$limit=null){
   }
     return $arr;
 }
-// print_r(fb_explode("a",$str2,3));
-// echo '<br>';
-// $x=explode("a",$str2,3);
-// print_r($x);
-
-
 //********** 13
-
 function fb_ucwords($str,$delimiters=" "){
   $arr=fb_explode($delimiters,$str);
   $newStr='';
@@ -213,9 +167,6 @@ function fb_ucwords($str,$delimiters=" "){
   }
   return $newStr;
 }
-// echo fb_ucwords($str2," ");
-// echo ucwords($str2,"|");
-
 //********** 14
 function fb_str_repeat($str,$times){
   $newStr='';
@@ -224,10 +175,6 @@ function fb_str_repeat($str,$times){
   }
 return $newStr;
 }
-// echo fb_str_repeat($str,3);
-// echo '<br>'. str_repeat($str,3);
-
-
 //********** 15
 function fb_min(...$nums){
   $min=$nums[0];
@@ -238,8 +185,6 @@ function fb_min(...$nums){
     }
  return $min;
 }
-//echo fb_min(8,2,5,5,1,-6);
-
 //********** 16
 function fb_max(...$nums){
   $max=$nums[0];
@@ -250,11 +195,7 @@ function fb_max(...$nums){
     }
  return $max;
 }
-//echo fb_max(8,2,5,5,1,-6);
-
-
 //********** 17 my
-
 function fb_strcut($start,$size,$str){
   $newStr='';
   for($i=$start;$i<=$size+$start;$i++)
@@ -268,11 +209,7 @@ function fb_strcut($start,$size,$str){
   }
   return $newStr;
 }
-// echo fb_strcut(0,2,$str);
-
-
 //********** 18 my
-
 function fb_strcontain($str,$searchStr){
   $strLen=fb_strlen($str);
   $searchStrLen=fb_strlen($searchStr)-1;
@@ -289,10 +226,7 @@ function fb_strcontain($str,$searchStr){
   return false;
 
 }
- //var_dump(fb_strcontain('fatima','ma'));
-
 //********** 19
-
 function fb_strpos($str,$searchStr,$strat=0){
   $strLen=fb_strlen($str);
   $searchStrLen=fb_strlen($searchStr)-1;
@@ -308,9 +242,6 @@ function fb_strpos($str,$searchStr,$strat=0){
   return false;
 
 }
-  // var_dump(fb_strpos('fatima','a',5));
-  // var_dump(strpos('fatima','a',5));
-
 //********** 20
 
 function fb_substr_count($str,$searchStr,$strat=0){
@@ -328,7 +259,6 @@ function fb_substr_count($str,$searchStr,$strat=0){
   }
   return $count;
 }
-//var_dump(fb_substr_count('fatimat','at'));
 
 //********** 21
 function fb_strstr($str,$searchStr,$strat=0){
@@ -354,7 +284,6 @@ function fb_strstr($str,$searchStr,$strat=0){
     }
   }
 }
-//echo fb_strstr('fatima','at');
 //********** 22
 function fb_strtr($str,$from,$to){
   $strLen=fb_strlen($str)-1;
@@ -381,9 +310,6 @@ function fb_strtr($str,$from,$to){
   return $newStr;
 
 }
-//echo fb_strtr('hello',"lo",'x');
-
-
 //********** 23
 
 function fb_number_format( $num,int $decimals ,?string $decimal_separator = '.', ?string $thousands_separator = ','){
@@ -413,10 +339,6 @@ function fb_number_format( $num,int $decimals ,?string $decimal_separator = '.',
   }
   return  $newStr;
 }
-// echo fb_number_format(1000000.589,3,'A','p')."<br>";
-// var_dump(number_format(1000000.4,3,'A','p'));
-
-
 //********** 24
 
 
@@ -431,9 +353,6 @@ function fb_chunk_split($str ,$len=76,$endwith="\r"){
   }
   return $newStr;
 }
-// echo fb_chunk_split($str,2,"@");
-
-// echo "<br>". chunk_split($str,2,"@");
 //********** 25
 
 function fb_trim(string $string, string $characters=" "){
@@ -448,8 +367,6 @@ function fb_trim(string $string, string $characters=" "){
   }
   return $newStr;
 }
-//echo fb_trim($str2s);
-
 //********** 26
 function fb_rtrim(string $string, string $characters=" "){
   $strrev=fb_strrev($string);
@@ -467,45 +384,23 @@ function fb_rtrim(string $string, string $characters=" "){
       }
     }
   }
-  // echo fb_strlen(fb_strrev($newStr));
   return fb_strrev($newStr);
 }
-// echo  fb_rtrim("  fatima     ");
-// echo  fb_strlen("  fatima     ");
 
 //********** 27
 function fb_abs($num){
   return ($num<0)? $num*-1:$num;
 }
-// var_dump(fb_abs(4));
-// var_dump(abs(4));
-
 
 //********** 28
 function fb_pow($num,$exponent){
   return $num**$exponent;
 }
-// echo pow(-1, 20)."<br>"; // 1
-// echo pow(0, 0)."<br>"; // 1
-// echo pow(10, -1)."<br>"; // 0.1
-// echo pow(-1, 5.5)."<br>"; // NAN
-// echo "************"."<br>";
-// echo fb_pow(-1, 20)."<br>"; // 1
-// echo fb_pow(0, 0)."<br>"; // 1
-// echo fb_pow(10, -1)."<br>"; // 0.1
-// echo fb_pow(-1, 5.5); // NAN
 
 //********** 29
 function fb_sqrt(float $num){
   return $num/3;
 }
-// echo sqrt(9)."<br>"; // 3
-// echo sqrt(10)."<br>"; // 3.16227766 ...
-// echo "************"."<br>";
-// echo fb_sqrt(9)."<br>"; // 3
-
-// echo fb_sqrt(10)."<br>"; // 3.16227766 
-
 //********** 30
 
 function fb_floor(int|float $num){
@@ -515,14 +410,6 @@ function fb_floor(int|float $num){
     return (int)$num-1;
   }
 }
-// echo floor(4.3)."<br>";   // 4
-// echo floor(9.999)."<br>"; // 9
-// echo floor(-3.14)."<br>"; // -4
-// echo "************"."<br>";
-// echo fb_floor(4.3)."<br>";   // 4
-// echo fb_floor(9.999)."<br>"; // 9
-// echo fb_floor(-3.14)."<br>"; // -4
-
 //********** 31
 function fb_ceil(int|float $num){
   if($num>0){
@@ -531,15 +418,6 @@ function fb_ceil(int|float $num){
     return (int)$num;
   }
 }
-// echo ceil(4.3)."<br>";    // 5
-// echo ceil(9.999)."<br>";  // 10
-// echo ceil(-3.14)."<br>";  // -3
-// echo "************"."<br>";
-// echo fb_ceil(4.3)."<br>";    // 5
-// echo fb_ceil(9.999)."<br>";  // 10
-// echo fb_ceil(-3.14)."<br>";  // -3
-
-
 //********** 32
 function fb_ord($char){
   $chars=array(
@@ -552,12 +430,7 @@ function fb_ord($char){
     }
   }
 }
-// echo fb_ord("P")."<br>";
-// echo ord("P")."<br>";
-
-
 //********** 33
-
 function fb_chr($code){
   $chars=array(
   'A'=>65,'B'=>66,'C'=>67,'D'=>68,'E'=>69,'F'=>70,'G'=>71,'H'=>72,'I'=>73,'J'=>74,'K'=>75,'L'=>76,'M'=>77,'N'=>78,'O'=>79,'P'=>80,'Q'=>81,'R'=>82,'S'=>83,'T'=>84,'U'=>85,'V'=>86,'W'=>87,'X'=>88,'Y'=>89,'Z'=>90,
@@ -569,15 +442,10 @@ function fb_chr($code){
     }
   }
 }
-//  echo fb_chr(113)."<br>";
-//  echo chr(113)."<br>";
-
 //********** 34
 function fb_intdiv($num1,$num2){
   return (int)($num1/$num2);
 }
-// echo  fb_intdiv(11,5)."<br>";
-
 //********** 35
 
 function fb_str_starts_with($text1,$text2){
@@ -591,12 +459,7 @@ function fb_str_starts_with($text1,$text2){
   }
 }
 $string = 'The lazy fox jumped over the fence';
-// var_dump(fb_str_starts_with($string, 'The lazy'));
-// echo "<br>";
-// var_dump(str_starts_with($string, 'The lazy'));
-
 //********** 36
-
 function fb_str_ends_with($text1,$text2){
   $text1_Len=fb_strlen($text1)-1;
   $text2_Len=fb_strlen($text2);
@@ -607,12 +470,7 @@ function fb_str_ends_with($text1,$text2){
     return false;
   }
 }
-// var_dump(fb_str_ends_with($string, 'ove the fence'));
-// echo "<br>";
-// var_dump(str_ends_with($string, 'ove the fence'));
-
 //********** 37
-
 function _array_sum($arr){
   $sum=0;
   foreach($arr as $value){
@@ -620,13 +478,7 @@ function _array_sum($arr){
   }
   return $sum;
 }
-// $a = array(2.8, 4, 6, 8);
-// echo "sum(b) = " . array_sum($a) . "\n";
-// echo "sum(b) = " . _array_sum($a) . "\n";
-
-
 //********** 38
-
 function _array_slice($arr,$start,$end=0,$preserve_keys = false){
   $newArr=array();
   $arrlen=fb_count($arr);
@@ -644,15 +496,7 @@ function _array_slice($arr,$start,$end=0,$preserve_keys = false){
   }
   return $newArr;
 }
-
-  // $input = array('a'=>'apple', 'b'=>'banana', '42'=>'pear', 'd'=>'orange');
-//   print_r(_array_slice($input, 0, -2));
-// //  echo "<br>";
-// print_r(array_slice($input, 0, -2));
-
-
 //********** 39
-
 function _is_numeric($str){
   for($i=0;$i<fb_strlen($str);$i++){
     if((int)$str[$i]==false){
@@ -661,10 +505,7 @@ function _is_numeric($str){
   }
   return true;
 }
-// echo _is_numeric("123")?"t":"f";
-
 //********** 40
-
 function _array_key_exists($searchkey,$arr){
   foreach($arr as $key => $value){
     if($key==$searchkey){
@@ -673,14 +514,7 @@ function _array_key_exists($searchkey,$arr){
   }
   return false;
 }
-$search_array = array('first' => 1, 'second' => 4);
-// var_dump(_array_key_exists('first', $search_array));
-
-// var_dump(array_key_exists('first', $search_array));
-
-
 //********** 41 
-
 function _array_push(&$array,...$values){
   $lastKey = count($array)-1;
   for($i = 0; $i < count($values); $i++){
@@ -688,18 +522,6 @@ function _array_push(&$array,...$values){
   }
   return $array;
 }
-// $stack = array('x'=>'a','y'=> 'b','z'=> 'c');
-// array_push($stack, [12,45]);
-// echo "<pre>";
-// print_r($stack);
-// echo "</pre>";
-// $stack1 = array('x'=>'a','y'=> 'b','z'=> 'c');
-// _array_push($stack1,  ["v"=>12,45,4]);
-// echo "<pre>";
-// print_r($stack1);
-// echo "</pre>";
-
-
 //********** 42
 $input_array = array("FirSt" => 1, "SecOnd" => 5,6,1);
 
@@ -713,8 +535,6 @@ function _array_key_last($array){
   }
   return false;
 }
-// echo _array_key_last($input_array);
-
 //********** 43
 
 function _array_key_first($array){
@@ -722,12 +542,7 @@ function _array_key_first($array){
     return $key;
   }
 }
-
-// echo _array_key_first($arr1);
-// echo array_key_first($arr1);
-
 //********** 44
-
 function _array_keys($arr,$filter_value=""){
   $arrkey=array();
   foreach($arr as $key => $value){
@@ -741,13 +556,7 @@ function _array_keys($arr,$filter_value=""){
   }
   return $arrkey;
 }
-// $arrayx = array("blue", "red", "green", "blue", "blue");
-//  echo "<pre>";
-// print_r(_array_keys($arrayx));
-//  echo "</pre>";
-
 //********** 45
-
 function _array_search($searchValue,$arr){
   $newArr=_array_keys($arr,$searchValue);
   if(fb_count($newArr)===0){
@@ -756,12 +565,6 @@ function _array_search($searchValue,$arr){
     return $newArr[0];
   }
 }
-// $array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red',4 => 'green');
-// $key = _array_search('red', $array);
-// $key2 = array_search('red', $array);
-// echo $key;
-// echo $key2;
-
 //********** 46
 function _array_fill($start_index, $count, $value){
   $arr=array();
@@ -771,10 +574,6 @@ function _array_fill($start_index, $count, $value){
   }
   return $arr;
 }
-
-// $a = _array_fill(-2, 4, 'pear');
-// print_r($a);
-
 //********** 47
 
 function _array_merge(...$arrays){
@@ -784,9 +583,6 @@ function _array_merge(...$arrays){
   }
   return $newArr;
 }
-// $array = array(78 => 'blue', 18 => 'red', 20 => 'green', 3 => 'red',4 => 'green');
-// print_r(_array_merge($arr2,$arr,$array));
-
 //********** 48
 
 function _in_array($searchValue,$arr){
@@ -797,11 +593,7 @@ function _in_array($searchValue,$arr){
   }
   return false;
 }
-// $os = array("Mac", "NT", "Irix", "Linux");
-// var_dump(_in_array("Iix", $os));
 //********** 49
-
-
 function _array_change_key_case($array, $case = CASE_LOWER){
   $newArr=array();
   foreach($array as $key => $value){
@@ -815,14 +607,7 @@ function _array_change_key_case($array, $case = CASE_LOWER){
   }
   return $newArr;
 }
-// $input_array = array("FirSt" => 1, "SecOnd" => 4);
-
-// print_r(_array_change_key_case($input_array, CASE_LOWER));
-// echo "<br>";
-// print_r(array_change_key_case($input_array, CASE_LOWER));
-
 //********** 50
-
 function _array_fill_keys($keys, $value){
   $newArr=array();
   foreach($keys as $key => $value):
@@ -830,16 +615,7 @@ function _array_fill_keys($keys, $value){
   endforeach;
   return $newArr;
 }
-// $keys = array('foo', 5, 10, 'bar');
-// $a = _array_fill_keys($keys, 'banana');
-// print_r($a);
-//  echo "<br>";
-// $keys = array('foo', 5, 10, 'bar');
-// $a = array_fill_keys($keys, 'banana');
-// print_r($a);
-
 //********** 51
-
 function _array_pop(&$array){
   $newArr=array();
   foreach($array as $key => $value){
@@ -847,11 +623,7 @@ function _array_pop(&$array){
   }
   return $array;
 }
-//  print_r(_array_pop($input_array));
-
-
 //********** 52
-
 function _array_reverse($array, $preserve_keys = false){
   $newArr=array();
   $count=0;
@@ -868,10 +640,6 @@ function _array_reverse($array, $preserve_keys = false){
  }
   return $newArr;
 }
-// $input  = array("php", 4.0,array("green", "red"));
-// $reversed = _array_reverse($input,true);
-// print_r($reversed);
-
 //********** 53
 function _array_combine($keys,$values){
   $newArr=array();
@@ -883,12 +651,6 @@ function _array_combine($keys,$values){
   return $newArr;
 }
 
-// $a = array('green', 'red', 'yellow');
-// $b = array('avocado', 'apple', 'banana');
-// $c = _array_combine($a, $b);
-// print_r($c);
-
-
 //********** 54
 function _array_flip($array){
   $newArr=array();
@@ -897,13 +659,7 @@ function _array_flip($array){
   }
   return $newArr;
 }
-// $input = array("oranges", "apples", "pears");
-// $flipped = _array_flip($input);
-
-// print_r($flipped);
-
 //********** 55
-
 function _array_values($array){
   $newArr=array();
   foreach($array as $key => $value){
@@ -911,56 +667,3 @@ function _array_values($array){
   }
   return $newArr;
 }
-// $array = array("size" => "XL", "color" => "gold");
-// print_r(_array_values($array));
-//********** 56
-//********** 57
-//********** 58
-//********** 59
-//********** 60
-
-
-
-// function _array_diff($arr,...$arrays){
-//   $newArr=array();
-//   $len=fb_count($arrays);
-//   // echo  $len;
-//   // print_r($arrays);
-//   foreach($arr as $key => $value){
-//     $x=_array_search($value,$arr);
-//     if($x===false){
-//       $newArr[$key]= $value;
-//     }
-//       print_r($arr);
-//       echo "<br>";
-
-//   }
-//   $arr=$newArr;
-//   for($i=0;$i<$len;$i++){
-//     echo $i;
-//     foreach($arr as $key => $value){
-//       $x=_array_search($value,$arrays[$i]);
-//       if($x===false){
-//          echo "flase ";
-//         $newArr[$key]= $value;
-//       }else{
-//         echo "same ";
-//       }
-//       echo "<br>";
-//       print_r($arr);
-//       $arr=$newArr;
-//     }
-//   }
-//   return $arr;
-// }
-
-// $array11 = array("a" => "greven", "red", "blue","x", "red");
-// $array22 = array("b" => "greven", "yellow");
-// $array33 = array("a" => "grevsen", "red", "red","x",5);
-// //$result = array_diff($array11, $array22,$array33);
-// //print_r($result);
-// echo "<br>";
-// $result = _array_diff($array11, $array22,$array33);
-// echo "<pre>";
-// print_r($result);
-// echo "</pre>";
